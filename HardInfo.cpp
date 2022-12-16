@@ -68,9 +68,11 @@ using namespace std;
 	long pages = sysconf(_SC_PHYS_PAGES);
 	long page_size = sysconf(_SC_PAGE_SIZE);
 	long totalMem = pages * page_size;
+	int totalMemInMB = totalMem / 1024;
+	int totalMemInGB = totalMemInMB / 1024;
 
 	cout << "=====================MEMORY===================" << endl;
-	cout << "Total System Memory: " << (totalMem / 1024) << " MB" << endl;
+	cout << "Total System Memory: " << totalMemInMB << " MB  ~  " << totalMemInGB << " GB "  << endl;
 	cout << "\n" << endl;
 	cout << "================OPERATING SYSTEM==============" << endl;
 	cout << GetOperatingSystem_Name() << endl;

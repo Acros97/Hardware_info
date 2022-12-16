@@ -1,4 +1,4 @@
-/* ******************** HardInfo 1.0 ****************** */
+/* ******************** HardInfo 1.1 ****************** */
  /*   Collect system information from x64 and x86 machines.
   *   MIT Licence.
   *   Compile using gcc 11.1 (https://gcc.gnu.org/)
@@ -57,6 +57,9 @@ using namespace std;
 	
 
 	// string includes manufacturer, model and clockspeed.
+	
+	cout << "HardInfo v1.1 - Written by Daniel Fros. MIT LICENCE. 2022." << endl;
+	cout << "\n" << endl;
 	cout << "=====================CPU======================" << endl;
 	cout << "CPU Type: " << CPUBrandString << endl;
 	cout << "\n" << endl;

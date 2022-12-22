@@ -15,6 +15,7 @@
 #include "sys/sysinfo.h"
 #include "sys/types.h"
 #include <unistd.h>
+#include <sys/utsname.h>
 
 
 using namespace std;
@@ -74,6 +75,12 @@ using namespace std;
 	int totalMemInMB = totalMem / 1024;
 	int totalMemInGB = totalMemInMB / 1024;
 
+	if(totalMemInGB > 8000 && totalMemInGB < 16000)
+		totalMemInGB = 8;
+	else if(totalMemInGB > 16000)
+		totalMemInGB = 16;
+
+		
 	cout << "=====================MEMORY===================" << endl;
 	cout << "Total System Memory: " << totalMemInMB << " MB  ~  " << totalMemInGB << " GB "  << endl;
 	cout << "\n" << endl;
